@@ -74,7 +74,7 @@ a {
 
 .row {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -377,6 +377,67 @@ i {
 .learn-more__btn:hover {
     background-color: #5011CC;
     cursor: pointer;
+}
+
+/* STEPS */
+
+.steps__container {
+    display: flex;
+}
+
+.steps__container--left {
+    width: 50%;
+}
+
+.steps__img {
+    width: 100%;
+    height: auto;
+}
+
+.steps__container--right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 48px;
+}
+
+.steps {
+    margin-top: 16px;
+    list-style-type: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+.step {
+    display: flex;
+    margin-top: 32px;
+}
+
+.step__description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.step__number {
+    color: #CBD5E0;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.step__description--title {
+    color: #243E63;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.step__description--para {
+    color: #718096;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+    margin-top: 12px;
 }
 
 /* ANIMATIONS */
