@@ -82,6 +82,18 @@ a {
     color: #6415FF;
 }
 
+.text--white {
+    color: #F7FAFC !important;
+}
+
+.text--light {
+    color: #EDF2F7 !important;
+}
+
+.text--gray {
+    color: #E2E8F0 !important;
+}
+
 section:nth-child(odd) {
     animation: fade-left-to-right 600ms 250ms backwards;
 }
@@ -503,6 +515,176 @@ nav {
 
 .values__img {
     width: 100%;
+}
+
+/* PRICING */
+
+.pricing__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 64px 0;
+}
+
+.plan {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
+    position: relative;
+}
+
+.plan__primary {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+    border-bottom: 2px solid #667EEA !important;
+}
+
+.plan__top {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    top: 0;
+    height: 8px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.plan__top--red {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 32px 0;
+    width: 100%;
+    border-left: 1px solid #cbd5e08a;
+    border-right: 1px solid #cbd5e08a;
+    border-bottom: 2px solid #cbd5e08a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.plan__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 32px 0;
+    border-left: 1px solid #cbd5e08a;
+    border-right: 1px solid #cbd5e08a;
+    border-bottom: 2px solid #cbd5e08a;
+}
+
+.plan__type {
+    color: #1A202C;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.625;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.plan__price {
+    color: #1A202C;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.625;
+    margin: 4px 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.plan__term {
+    color: #A0AEC0;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.625;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.plan__feature--primary {
+    color: #1A202C;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.plan__feature {
+    color: #718096;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.plan__btn--container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 32px 64px;
+    border-left: 1px solid #cbd5e08a;
+    border-right: 1px solid #cbd5e08a;
+    border-bottom: 1px solid #cbd5e08a;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.plan__btn {
+    color: #F7FAFC;
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 9999px;
+    transition: all 300ms ease;
+}
+
+.plan__btn--primary {
+    color: #6415FF;
+    background-color: #F7FAFC;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 9999px;
+    transition: all 300ms ease;
+}
+
+.plan__btn--red {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan__btn:hover,
+.plan__btn--primary:hover {
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: translate(1px, -1px);
+}
+
+.plan__btn--primary:hover {
+    background-color: #E2E8F0;
 }
 
 /* ANIMATIONS */
