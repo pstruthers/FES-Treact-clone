@@ -825,6 +825,57 @@ nav {
     height: 26px;
 }
 
+/* PROMO */
+
+.promo__container {
+    background-color: #6415FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 96px 168px;
+    border-radius: 10px;
+}
+
+.promo__heading {
+    color: #F7FAFC;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 500px;
+}
+
+.promo__btn {
+    color: #F7FAFC;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 20px 40px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.get-started__btn {
+    background-color: #F56565;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin: 0 32px 0 48px;
+}
+
+.get-started__btn:hover {
+    background-color: #E53E3E;
+}
+
+.contact__btn {
+    background-color: transparent;
+    border: 0.1px solid #F7FAFC;
+}
+
+.contact__btn:hover {
+    color: #6415FF;
+    background-color: #F7FAFC;
+}
+
 /* ANIMATIONS */
 
 @keyframes fade-left-to-right {
