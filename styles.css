@@ -11,6 +11,14 @@ section {
     padding: 32px;
 }
 
+section:nth-child(odd).in-view {
+    animation: slide-left-to-right 0.5s ease;
+}
+
+section:nth-child(even).in-view {
+    animation: slide-right-to-left 0.5s ease;
+}
+
 a {
     text-decoration: none;
     position: relative;
@@ -494,28 +502,24 @@ nav {
     margin-top: 32px;
 }
 
-.fa-dollar-sign {
-    color: #276749;
-    background-color: #9AE6B4;
-    font-size: 18px;
-    width: 40px;
-    aspect-ratio: 1;
-    border-radius: 9999px;
+#values i {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    aspect-ratio: 1;
+    font-size: 18px;
+    border-radius: 9999px;
+}
+
+.fa-dollar-sign {
+    color: #276749;
+    background-color: #9AE6B4;
 }
 
 .fa-briefcase {
     color: #9B2C2C;
     background-color: #FEB2B2;
-    font-size: 18px;
-    width: 40px;
-    aspect-ratio: 1;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .principle__title--text {
@@ -883,7 +887,7 @@ nav {
 
 /* FOOTER */
 
-footer {
+#footer {
     background-color: #6415FF;
     color: #F7FAFC;
     padding: 20px 0;
@@ -1001,18 +1005,18 @@ footer {
 
 /* ANIMATIONS */
 
-@keyframes fade-left-to-right {
+@keyframes slide-left-to-right {
     0% {
-        transform: translateX(-2000px);
+        transform: translateX(-100%);
     }
     100% {
         transform: translateX(0);
     }
 }
 
-@keyframes fade-right-to-left {
+@keyframes slide-right-to-left {
     0% {
-        transform: translateX(2000px);
+        transform: translateX(100%);
     }
     100% {
         transform: translateX(0);
