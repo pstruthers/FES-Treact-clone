@@ -7,7 +7,7 @@
     font-family: "Inter", sans-serif;
 }
 
-body {
+section {
     padding: 32px;
 }
 
@@ -237,6 +237,11 @@ nav {
 
 .landing__input--email:hover {
     border-color: #B0B0B0;
+}
+
+.landing__input--email:focus {
+    border-color: #6415FF;
+    outline: none;
 }
 
 .landing__input--btn {
@@ -874,6 +879,124 @@ nav {
 .contact__btn:hover {
     color: #6415FF;
     background-color: #F7FAFC;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #6415FF;
+    color: #F7FAFC;
+    padding: 20px 0;
+    margin-top: 56px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 5);
+    text-align: left;
+    flex: 0;
+}
+
+.link__title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.link__list {
+    list-style-type: none;
+    margin-top: 24px;
+    font-weight: 500;
+}
+
+.link__list--item {
+    margin-top: 12px;
+}
+
+.footer__link {
+    color: #F7FAFC;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.footer__link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #F7FAFC;
+    opacity: 0;
+    transition: 300ms;
+}
+
+.footer__link:hover::after {
+    opacity: 1;
+}
+
+.footer__divider {
+    margin: 64px 0;
+    width: 100%;
+    border-bottom: 2px solid rgb(116, 44, 255);
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo--text {
+    color: #F7FAFC;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-left: 8px;
+}
+
+.copyright {
+    color: #CBD5E0;
+    font-weight: 500;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__link {
+    color: rgb(26, 32, 44);
+    background-color: rgb(247, 250, 252);
+    border-radius: 9999px;
+    margin: 0 8px;
+    transition: all 300ms ease;
+}
+
+.social__link:hover {
+    background-color: #CBD5E0;
+}
+
+#footer i {
+    width: 30px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 }
 
 /* ANIMATIONS */
