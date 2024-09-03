@@ -7,16 +7,16 @@
     font-family: "Inter", sans-serif;
 }
 
-section {
+body {
     padding: 32px;
 }
 
 section:nth-child(odd).in-view {
-    animation: slide-left-to-right 0.5s ease;
+    animation: slide-left-to-right 0.7s ease;
 }
 
 section:nth-child(even).in-view {
-    animation: slide-right-to-left 0.5s ease;
+    animation: slide-right-to-left 0.7s ease;
 }
 
 a {
@@ -549,17 +549,19 @@ nav {
 .plans {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding: 64px 0;
 }
 
 .plan {
-    width: calc(100% / 3);
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 32px;
     position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .plan__primary {
@@ -570,8 +572,8 @@ nav {
 .plan__top {
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
     position: absolute;
-    left: 32px;
-    right: 32px;
+    left: 0;
+    right: 0;
     top: 0;
     height: 8px;
     border-top-left-radius: 20px;
@@ -588,11 +590,11 @@ nav {
     align-items: center;
     padding: 40px 0 32px 0;
     width: 100%;
-    border-left: 1px solid #cbd5e08a;
-    border-right: 1px solid #cbd5e08a;
-    border-bottom: 2px solid #cbd5e08a;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom: 2px solid rgb(226, 232, 240);
+}
+
+.plan__heading--primary {
+    border-bottom: 2px solid rgb(102, 126, 234);
 }
 
 .plan__description {
@@ -601,9 +603,11 @@ nav {
     align-items: center;
     width: 100%;
     padding: 32px 0;
-    border-left: 1px solid #cbd5e08a;
-    border-right: 1px solid #cbd5e08a;
-    border-bottom: 2px solid #cbd5e08a;
+    border-bottom: 2px solid rgb(226, 232, 240);
+}
+
+.plan__description--primary {
+    border-bottom: 2px solid rgb(102, 126, 234);
 }
 
 .plan__type {
@@ -660,11 +664,6 @@ nav {
     display: flex;
     justify-content: center;
     padding: 32px 64px;
-    border-left: 1px solid #cbd5e08a;
-    border-right: 1px solid #cbd5e08a;
-    border-bottom: 1px solid #cbd5e08a;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .plan__btn {
@@ -886,6 +885,10 @@ nav {
 }
 
 /* FOOTER */
+
+footer {
+    margin: 0 -32px -32px -32px;
+}
 
 #footer {
     background-color: #6415FF;
