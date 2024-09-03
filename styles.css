@@ -842,6 +842,27 @@ nav {
     justify-content: center;
     padding: 96px 168px;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#promo .circle {
+    position: absolute;
+    width: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+#promo .circle-1 {
+    bottom: -100px;
+    left: -70px;
+    background-color: rgba(80, 17, 204, 0.5);
+}
+
+#promo .circle-2 {
+    top: -240px;
+    right: -60px;
+    background-color: rgba(80, 17, 204, 0.55);
 }
 
 .promo__heading {
@@ -851,6 +872,7 @@ nav {
     line-height: 1.5;
     width: 100%;
     max-width: 500px;
+    z-index: 1;
 }
 
 .promo__btn {
@@ -861,6 +883,10 @@ nav {
     padding: 20px 40px;
     transition: all 300ms ease;
     cursor: pointer;
+}
+
+.promo__btns {
+    z-index: 1;
 }
 
 .get-started__btn {
@@ -895,6 +921,27 @@ footer {
     color: #F7FAFC;
     padding: 20px 0;
     margin-top: 56px;
+    position: relative;
+    overflow: hidden;
+}
+
+#footer .circle {
+    position: absolute;
+    width: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+#footer .circle-1 {
+    top: -105px;
+    left: -85px;
+    background-color: rgba(80, 17, 204, 0.5);
+}
+
+#footer .circle-2 {
+    bottom: -180px;
+    right: -120px;
+    background-color: rgba(80, 17, 204, 0.5);
 }
 
 .links {
@@ -915,6 +962,7 @@ footer {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 700;
+    z-index: 1;
 }
 
 .link__list {
