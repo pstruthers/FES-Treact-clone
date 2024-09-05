@@ -234,7 +234,7 @@ nav {
     border: 2px solid #E2E8F0;
     font-size: 16px;
     font-weight: 500;
-    padding: 20px 192px 20px 32px;
+    padding: 20px 176px 20px 32px;
     transition: all 300ms;
     color: #243E63;
 }
@@ -259,8 +259,8 @@ nav {
     font-weight: 700;
     background-color: #6415FF;
     margin: 8px 8px 8px 0;
-    padding: 16px 0;
-    width: 35%;
+    padding: 16px 24px;
+    width: auto;
     border-radius: 9999px;
     right: 0;
     top: 0;
@@ -707,7 +707,7 @@ nav {
     background-color: #E2E8F0;
 }
 
-/* TESTIMONIAL */
+/* TESTIMONIALS */
 
 .testimonial__container {
     display: flex;
@@ -840,7 +840,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 96px 168px;
+    padding: 96px 24px 96px 24px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -870,7 +870,7 @@ nav {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.5;
-    width: 100%;
+    width: auto;
     max-width: 500px;
     z-index: 1;
 }
@@ -919,7 +919,7 @@ footer {
 #footer {
     background-color: #6415FF;
     color: #F7FAFC;
-    padding: 20px 0;
+    padding: 20px 32px;
     margin-top: 56px;
     position: relative;
     overflow: hidden;
@@ -1072,4 +1072,79 @@ footer {
     100% {
         transform: translateX(0);
     }
+}
+
+/* RESPONSIVENESS */
+
+/* LARGE LAPTOPS */
+
+@media (max-width: 1280px) {
+
+    /* LANDING PAGE */
+
+    .landing__heading {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+
+    .landing__para {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+
+    .landing__customer--logos {
+        padding-right: 64px;
+    }
+
+    .landing__figure {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .landing__img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* PRICING */
+    
+    .plan__btn--container {
+        padding: 32px 32px;
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonial__container--left {
+        width: 40%;
+    }
+
+    .testimonial__container--right {
+        width: 60%;
+    }
+
+    .reviews__container {
+        width: 100%;
+        max-width: 800px;
+        overflow: hidden;
+    }
+
+}
+
+/* SMALL LAPTOPS */
+
+@media (max-width: 1024px) {
+
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+}
+
+/* PHONES */
+
+@media (max-width: 425px) {
+    
 }
