@@ -7,6 +7,10 @@
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 32px;
 }
@@ -22,6 +26,10 @@ section:nth-child(even).in-view {
 a {
     text-decoration: none;
     position: relative;
+}
+
+ul {
+    list-style: none;
 }
 
 .section__heading--center{
@@ -191,6 +199,98 @@ nav {
     margin: 0 12px 0 0;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    display: none;
+    transition: all 300ms ease;
+}
+
+.btn__menu:hover {
+    color: #6415FF;
+    cursor: pointer;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: all 300ms ease;
+}
+
+.btn__menu--close:hover {
+    color: #6415FF;
+    cursor: pointer;
+}
+
+.nav__link--hover-menu::after {
+    bottom: -10px;
+
+}
+
+.nav__link--hover-menu:hover::after {
+    opacity: 1;
+}
+
+.menu__backdrop {
+    position: fixed;
+    background-color: white;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-radius: 10px;
+    padding: 32px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* to allow for animations/transitions when toggling backdrop since you can't add animations/transitions to items that are not displayed */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 100ms ease;
+    animation: menu-slide-out 300ms ease;
+}
+
+/* when menu--open class is enabled, set the menu__backdrop */
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+    animation: menu-slide-in 500ms ease;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__link {
+    color: #1A202C;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 300ms ease;
+}
+
+.menu__link:hover {
+    color: #6415FF;
+}
+
+.menu__link--primary {
+    color: #F7FAFC;
+}
+
+.menu__link--primary:hover {
+    color: #F7FAFC;
+}
+
+.menu__list {
+    padding: 16px 0;
+}
+
 /* LANDING PAGE */
 
 .landing__container {
@@ -329,6 +429,7 @@ nav {
 .service {
     display: flex;
     width: calc(100% / 3);
+    max-width: 350px;
     padding: 32px 20px;
 }
 
@@ -383,6 +484,8 @@ nav {
 
 .quality__container--right {
     width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .quality__container--img {
@@ -416,6 +519,9 @@ nav {
 
 .steps__container--left {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .steps__img {
@@ -477,10 +583,14 @@ nav {
 
 .values__container--left {
     width: 50%;
+    padding-right: 48px;
 }
 
 .values__container--right {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .principles {
@@ -547,6 +657,7 @@ nav {
 }
 
 .plans {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -771,6 +882,7 @@ nav {
 
 .person {
     display: flex;
+    align-items: center;
 }
 
 .person__text {
@@ -795,6 +907,7 @@ nav {
 .person__img--mask {
     width: 80px;
     height: 80px;
+    min-width: 80px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -840,7 +953,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 96px 24px 96px 24px;
+    padding: 96px 0;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -870,8 +983,7 @@ nav {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.5;
-    width: auto;
-    max-width: 500px;
+    max-width: 450px;
     z-index: 1;
 }
 
@@ -893,7 +1005,7 @@ nav {
     background-color: #F56565;
     border: none;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    margin: 0 32px 0 48px;
+    margin: 0 32px;
 }
 
 .get-started__btn:hover {
@@ -1074,6 +1186,30 @@ footer {
     }
 }
 
+@keyframes menu-slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    33% {
+        transform: translateX(-15%);
+    }
+    66% {
+        transform: translateX(2%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes menu-slide-out {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 /* RESPONSIVENESS */
 
 /* LARGE LAPTOPS */
@@ -1135,7 +1271,151 @@ footer {
 
 @media (max-width: 1024px) {
 
-}
+    /* NAVIGATION */
+
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    /* LANDING PAGE */
+
+    .landing__container {
+        flex-direction: column;
+    }
+
+    .landing__container--left {
+        width: 100%;
+        max-width: 550px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .landing__container--right {
+        width: 100%;
+    }
+
+    .landing__figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    .landing__heading {
+        width: 100%;
+        font-size: 30px;
+        letter-spacing: 0.5px;
+    }
+
+    .landing__para {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .landing__customer--container {
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .landing__customer--para {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .landing__customer--logos {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 32px;
+    }
+
+    /* FEATURES */
+
+    .description__para--center {
+        font-size: 16px;
+    }
+
+    .services {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .service {
+        width: 50%;
+    }
+
+    /* QUALITY WORK */
+
+    .description__heading--left {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .description__para--left {
+        font-size: 16px;
+    }
+
+    /* STEPS */
+
+    .steps__container--right {
+        padding: 0 0 0 48px;
+    }
+
+    /* VALUES */
+
+    .principles {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* PRICING */
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 0 0;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 380px;
+        margin: 32px 0;
+    }
+
+    .plan__btn, .plan__btn--primary {
+        width: 75%;
+    }
+
+    /* PROMO */
+
+    .promo__container {
+        flex-direction: column;
+    }
+
+    .promo__heading {
+        text-align: center;
+    }
+
+    .promo__btns {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .promo__btn {
+        padding: 16px 32px;
+    }
+
+    .get-started__btn {
+        margin: 0 32px 0 0;
+    }
+
+}    
 
 /* TABLETS */
 
