@@ -421,6 +421,8 @@ nav {
 .services {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 48px 0;
     width: 100%;
     max-width: 1024px;
@@ -428,6 +430,7 @@ nav {
 
 .service {
     display: flex;
+    justify-content: center;
     width: calc(100% / 3);
     max-width: 350px;
     padding: 32px 20px;
@@ -1037,6 +1040,10 @@ footer {
     overflow: hidden;
 }
 
+#footer .container {
+    padding: 40px 0 64px 0;
+}
+
 #footer .circle {
     position: absolute;
     width: 300px;
@@ -1065,9 +1072,9 @@ footer {
 .link {
     display: flex;
     flex-direction: column;
-    width: calc(100% / 5);
     text-align: left;
     flex: 0 auto;
+    margin-top: 48px;
 }
 
 .link__title {
@@ -1079,7 +1086,7 @@ footer {
 
 .link__list {
     list-style-type: none;
-    margin-top: 24px;
+    margin-top: 12px;
     font-weight: 500;
 }
 
@@ -1598,10 +1605,6 @@ footer {
         width: calc(100% / 3);
     }
 
-    .link:nth-child(4), .link:nth-child(5) {
-        margin-top: 48px;
-    }
-
     .links {
         justify-content: flex-start;
         margin-top: -24px;
@@ -1621,8 +1624,123 @@ footer {
 
 @media (max-width: 640px) {
 
-}
+    /* LANDING PAGE */
 
-@media (max-width: 425px) {
-    
+    .landing__input--container {
+        position: static;
+    }
+
+    .landing__input--btn {
+        position: static;
+        width: 100%;
+        height: 60px;
+        margin: 16px 0;
+    }
+
+    /* FEATURES */
+
+    .description__heading--center {
+        font-size: 36px;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service__description--title, .service__description--para {
+        text-align: center;
+    }
+
+    .service__description {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .service__description {
+        margin-top: 16px;
+    }
+
+    .service__description--para {
+        margin-top: 4px;
+    }
+
+    /* QUALITY WORK */
+
+    .description__heading--left {
+        font-size: 30px;
+    }
+
+    /* PRICING */
+
+    .plan__price {
+        font-size: 36px;
+    }
+
+    /* TESTIMONIALS */
+
+    .reviewer, .person {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .person__text {
+        margin: 8px 0 0 0;
+    }
+
+    .person__img--mask {
+        width: 64px;
+        height: 64px;
+        min-width: 64px;
+    }
+
+    .review__para {
+        margin-bottom: 32px;
+    }
+
+    .arrows {
+        margin-top: 32px;
+    }
+
+    /* PROMO */
+
+    .promo__heading {
+        font-size: 24px;
+        max-width: 500px;
+    }
+
+    .promo__btns {
+        flex-direction: column;
+    }
+
+    .promo__btn {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .get-started__btn {
+        margin: 0;
+        height: 43px;
+    }
+
+    .contact__btn {
+        margin-top: 16px;
+    }
+
+    /* FOOTER */
+
+    .links {
+        justify-content: center;
+    }
+
+    .link {
+        width: auto;
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
 }
